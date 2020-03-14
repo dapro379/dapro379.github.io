@@ -11,10 +11,16 @@
     body {
       font-family: "Nanum Gothic", d2coding,
         Menlo, Consolas, DejaVu Sans Mono, monospace;
-      font-size: 20px;
+      /* font-size: 20px;
       line-height: 40px;
       margin-left: 40px;
-      /* background-color: powderblue; */
+      background-color: powderblue; */
+    }
+
+    /* address 태그 브라우저 기본값 */
+    address {
+      display: block;
+      font-style: italic;
     }
   </style>
 </head>
@@ -33,6 +39,7 @@
     <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
     <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
   </ul>
+  <hr>
 
   <h2>HTML Attributes</h2>
   <ul>
@@ -63,8 +70,8 @@
   <button>This is a Button sample.</button>
 
   <p>&lt;br&gt; is an empty element without a closing tag
-    (the &lt;br&gt; tag defines a line break)<br>
-    &lt;hr&gt; tag defines a thematic break in an HTML page,
+    (the &lt;br&gt; tag defines a line break)</p>
+  <p>&lt;hr&gt; tag defines a thematic break in an HTML page,
     and is most often displayed as a horizontal rule.<br>
     The <span style="color: red;"><b>&lt;hr&gt;</b></span> element is
     used to separate content (or define a change) in an HTML page</p>
@@ -83,6 +90,60 @@
     <li><sub>&lt;sub&gt; - Subscript text</sub>
     <li><sup>&lt;sup&gt; - Superscript text</sup>
   </ul>
+  <hr>
+
+  <h2>HTML Quotation and Citation Elements</h2>
+  <p>
+    The HTML <b>&lt;q&gt;</b> element defines a short quotation.<br>
+    Browsers usually insert quotation marks around the <b>&lt;q&gt;</b>
+    element as follows.<br>
+    WWF's goal is to:
+    <q style="color: blue;">Build a future where people live in harmony with nature.</q>
+  </p>
+
+  <p>The HTML <mark style="background-color: powderblue;">
+      &lt;blockquote&gt;</mark> element defines
+    a section that is quoted from another source.<br>
+    Browsers usually indent <mark style="background-color: powderblue;">
+      &lt;blockquote&gt;</mark> elements.</p>
+  <blockquote cite="https://dapro379.github.io/">
+    The <b>cite attribute</b> does not render as anything special
+    in any of the major browsers,
+    but it can be used by search engines
+    to get more information about the quotation.
+  </blockquote>
+
+  <p>The HTML <b>&lt;abbr&gt;</b> element defines an abbreviation or an acronym.<br>
+    Marking abbreviations can give useful information to browsers,
+    translation systems and search-engines.</p>
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+  <p>The HTML <b>&lt;address&gt;</b> element
+    defines contact information (author/owner) of a document or an article.<br>
+    The <b>&lt;address&gt;</b> element is usually displayed in italic.
+    Most browsers will add a line break before and after the element.</p>
+  <ul>
+    <li>address 태그는 소유자 또는 작성자의 연락처를 나타내는 태그입니다.</li>
+    <li>body 태그 안에 있으면 문서의 소유자 또는 작성자의 연락처를 나타냅니다.</li>
+    <li>article 태그 안에 있으면 기사의 소유자 또는 작성자의 연락처를 나타냅니다.</li>
+    <li>기본 모양은 기울임꼴입니다.</li>
+  </ul>
+  <address>
+    TEL : 82-11-000-0000-0000<br>
+    <a href="mailto:dapro379@korea.co.kr">E-Mail : dapro379@korea.co.kr</a><br>
+    Address : Seoul, Korea<br>
+  </address>
+
+  <p>The HTML <b>&lt;cite&gt;</b> element defines the title of a work.<br>
+    Browsers usually display <b>&lt;cite&gt;</b> elements in italic.</p>
+  <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+  <p>The HTML <b>&lt;bdo&gt;</b> element defines bi-directional override.<br>
+    The <b>&lt;bdo&gt;</b> element is used
+    to override the current text direction.</p>
+  <p><bdo dir="rtl">이 문장은 오른쪽에서 왼쪽으로 표시 됩니다.</bdo><br>
+  <bdo dir="rtl">This text will be written from right to left</bdo></p>
+  <hr>
 
 </body>
 
