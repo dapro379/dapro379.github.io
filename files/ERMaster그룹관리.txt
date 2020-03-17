@@ -1,0 +1,16 @@
+authority_item
+조회가능여부	can_select	char	1
+등록가능여부	can_insert	char	1
+수정가능여부	can_update	char	1
+삭제가능여부	can_delete	char	1
+출력가능여부	can_print	char	1
+파일업로드가능여부	can_file_up	char	1
+파일다운로드가능여부	can_file_down	char	1
+
+operation_info
+등록일시	insert_date	date
+등록자ID	insert_user_id	varchar	20
+등록자명	insert_user_name	varchar	60
+수정일시	update_date	date
+수정자ID	update_user_id	varchar	20
+수정자명	update_user_name	varchar	60
