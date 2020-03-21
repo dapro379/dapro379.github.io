@@ -1,20 +1,29 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 28px; background-color: cornsilk;
+  margin-top: 20px; margin-bottom: 20px;
+  margin-left: 40px; margin-right: 40px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  padding: 7px;
+  padding: 14px;
   /* padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 7px;
   padding-right: 7px; */
 }
 h1 {
-  border: 2px solid DodgerBlue;
+  border: 2px solid cornflowerblue;
 }
 h2 {
-  border: 2px solid Tomato;
+  border: 1px solid orange;
 }
+
 /* 하이퍼링크의 언더라인을 표시하지 않음 */
 a {
   text-decoration: none;
 }
+
 /* address 태그 브라우저 기본값 */
 /* address {
   display: block;
