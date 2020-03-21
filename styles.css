@@ -19,6 +19,13 @@ h2 {
   border: 1px solid orange;
 }
 
+img {
+  /* 반응형 웹에서 웹브라우저 가로폭의 변화에 따라 이미지 크리 자동 조정 */
+  max-width: 100%;
+  /* 이미지 크기가 attribute로 설정되어 있는 경우 세로폭도 자동 조절 */
+  height: auto !important;
+}
+
 /* 하이퍼링크의 언더라인을 표시하지 않음 */
 a {
   text-decoration: none;

@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    #p01 {
+      color: blue;
+      font-weight: bold;
+    }
+    p.p01 {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 
 </head>
 
@@ -26,9 +36,20 @@
     <a href="files/사용자별권한관리_v0.1.erm">
       사용자별권한관리_v0.1.erm 다운로드</a></p>
   <img src="images/사용자별권한관리_v0.1.png"
+    style="width: 800px; height: 600px;"
     title="사용자별 권한관리 논리 Entity Relationship Diagram"
     alt="사용자별 권한관리 논리 Entity Relationship Diagram">
-  <p>설명은 나중에 ^^</p>
+  <p>위의 모델에 공감하는 분도, 고개를 갸웃 하는 분도
+    혹은 전혀 공감하지 않는 분들도 있을 것입니다.<br>
+    지금부터 이슈가 될만한 사항에 대해 설펴보고
+    왜 위와 같이 설계 하였는지에 대해 설명하겠습니다.</p>
+  <hr>
+  <!-- id attribute : define a specific style for one special element -->
+  <p id="p01">왜 프로그램 단위로 권한을 부여하였을까?</p>
+  <p class="p01">왜 프로그램 단위로 권한을 부여하였을까?</p>
+  <p>모델을 보면 역할별로 프로그램 및 기능에 대한 권한을 설정하고,
+    사용자별로 해당 사용자가 가질 수 있는 역할을 부여하고 있음에도 불구하고
+    실질적인 권한은 사용자별로 프로그램 및 기능에 대한 권한을 설정하였습니다.</p>
 
   <hr>
   <address>
