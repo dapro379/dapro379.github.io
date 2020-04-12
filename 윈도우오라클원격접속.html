@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>원도우용 오라클 데이터베이스 원격접속 허용</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>원도우용 오라클 데이터베이스 원격접속 허용</h1>
+  <p>본 문서는 원격 SQLGate, Dbeaver 같은 데이터베이스 개발 도구에서
+    원격 오라클 데이터베이스에 접속하기 위해서는 반드시 오라클 클라이언트 프로그램을
+    설치하여야 하는가? 라는 물음에서 시작한 시험이며,
+    시험 결과 클라이언트 PC에서 TCP 방식으로 서버에 접속할 경우에는
+    오라클 클라이언트 프로그램의 설치가 반드시 필요하지는 않다는
+    사실을 확인하였음을 먼저 알려 드립니다.</p>
+  <p>오라클을 처음 경우 설치한 윈도우 PC에서는 오라클 데이터베이스에 원활하게 접속되는데
+    외부 윈도우 PC에서는 접속이 되지 않았습니다.
+    이를 해결하기 위해 검색을 통해 얻은 정보로 다양한 시도를 해 보았으나
+    원하는 결과를 얻지 못하던 중 다음 페이지에서 해답을 찾아 소개합니다.</p>
+  <p>인용한 사이트:
+    <cite>
+      <a href="https://m.blog.naver.com/devch/220790632382">
+        Oracle - 외부접속 및 방화벽 허용</a>
+    </cite>
+  </p>
+  <p></p>
+  <h3>오라클 리스너 HOST 주소변경</h3>
+  <p>먼저 오라클 데이터베이스 서버에서 listener.ora 파일의 호스트 주소를
+    <b>"localhost"</b> 에서 해당 서버의 <b>"컴퓨터이름"</b>으로 변경합니다.</p>
+  <p>참고로 혹시 localhost 대신 서버 IP를 지정해도 되지 않을까 하여 시험해 보았으나
+    이 경우에는 원격접속 뿐만 아니라 로컬접속도 되지 않았습니다.
+    혹자는 tnsnames.ora 파일과 listener.ora 파일의 localhost 부분을
+    서버의 IP로 모두 변경하면 된다고 하여 시험해 보았으나
+    오히려 Oracle Enterprise Manager 접속도 되지 않았습니다.</p>
+
+  <h3>오라클 리스너 포트 방화벽 허용</h3>
+  <p><b>윈도우의 방화벽</b> 설정에서 오라클의 <b>1521 포트를 허용으로 설정</b>
+    (제어판 > 시스템 및 보안 > Windows Defender 방화벽 >
+    고급설정 > 인바운드규칙 > 새규칙) 합니다.</p>
+  <p>오라클 설치 시 Oracle Enterprise Manager 포트와 DB Connection 포트 모두
+    윈도우의 연결허용으로 설정되어 있지 않으므로 원격접속을 허용할 포트는
+    방화벽 설정에서 연결허용해 주어야 합니다.</p>
+
+  <h3>결론</h3>
+  <p>tnsnames.ora 파일은 원격접속과 무관하므로 <b>listener.ora 파일만 수정 후</b>
+    리스너 중지 후 다시 시작하면 되며,
+    방화벽에서는 <b>필요한 포트를 연결허용</b>으로 설정해 주면
+    원격에서 오라클 데이터베이스에 접속이 가능합니다.</p>
+
+</body>
+</html>
